@@ -1,0 +1,22 @@
+# Vimo Rust Infrastructure
+# 共享的 Rust 基础设施，供所有 Vimo 项目使用
+
+[workspace]
+resolver = "2"
+members = [
+    "vimo-ffi",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/vimo-ai/vimo-rust"
+authors = ["Vimo AI"]
+
+[workspace.dependencies]
+# 内部 crates
+vimo-ffi = { path = "vimo-ffi" }
+
+# 常用依赖
+thiserror = "2"
