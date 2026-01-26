@@ -18,7 +18,7 @@ vimo-ffi 的职责边界：
 |------|------|------|
 | mcp-router-core | ✅ 已完成 | ~35 个 FFI 函数，78 个测试通过 |
 | vlaude-ffi | ✅ 已完成 | 14 个 FFI 函数，使用 ffi_boundary_simple |
-| claude-session-db | ⚠️ 已有保护 | 17 处 catch_unwind，可选迁移 |
+| ai-cli-session-db | ⚠️ 已有保护 | 17 处 catch_unwind，可选迁移 |
 | socket-client-ffi | ⚠️ 已有保护 | 14 处 catch_unwind，可选迁移 |
 | sugarloaf-ffi | ❌ 待迁移 | 3/80 函数有保护，需要特殊处理日志桥接 |
 
@@ -57,7 +57,7 @@ where
    - cursor.rs: 1 个
    - lib.rs: 1 个
 
-### claude-session-db / socket-client-ffi（可选）
+### ai-cli-session-db / socket-client-ffi（可选）
 
 已有 catch_unwind 保护，可选择迁移到 vimo-ffi 统一风格。优先级低。
 
@@ -71,4 +71,4 @@ where
 
 - mcp-router-core: 已合入 main
 - vlaude-ffi: `5aae04d` ✨ Add ffi_boundary_simple wrapper for panic safety
-- claude-session-db WAL: `0135072` ✨ Enable WAL mode and improve search fallback
+- ai-cli-session-db WAL: `0135072` ✨ Enable WAL mode and improve search fallback
